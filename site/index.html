@@ -58,7 +58,11 @@
   .cell.pad{background:transparent; border-color:transparent}
   .cell.today{border-color:var(--fell); box-shadow:inset 0 0 0 1px var(--fell)}
   .datenum{font-size:.82rem; color:var(--muted); font-weight:600; font-variant-numeric:tabular-nums}
-  .cell.today .datenum{color:var(--fell)}
+  /* Today reads as a filled marker, not just a tinted number — the ring alone
+     was easy to miss against the cell borders. */
+  .cell.today .datenum{color:var(--card); background:var(--fell); font-weight:700;
+    align-self:flex-start; min-width:1.45rem; height:1.45rem; padding:0 .3rem;
+    border-radius:999px; display:flex; align-items:center; justify-content:center}
 
   /* Day-cell contents. Everything shows in full; if a day is busy enough that
      the cell would grow past CELL_CONTENT_CAP, fitCell() steps it down a
@@ -278,12 +282,10 @@ async function load(){
 }
 
 function start(){
-  // Open on the month of the next upcoming one-off, else the earliest, else today.
-  const oneOffs = DATA.events.filter(e => e.kind === "one_off" && e.date)
-                      .map(e => e.date).sort();
-  const upcoming = oneOffs.find(d => d >= iso(today)) || oneOffs[0];
-  const seed = upcoming ? new Date(upcoming + "T00:00:00") : today;
-  view = new Date(seed.getFullYear(), seed.getMonth(), 1);
+  // Always open on the current month, so "today" is on screen and the calendar
+  // agrees with the reader's own sense of where they are in the year. Use the
+  // arrows or Today to move; the weekly aside is month-independent.
+  view = new Date(today.getFullYear(), today.getMonth(), 1);
 
   const s = DATA.source || {};
   const when = s.generated_at ? new Date(s.generated_at).toLocaleDateString("en-GB",
@@ -341,8 +343,10 @@ function renderGrid(){
   for(let day=1; day<=daysIn; day++){
     const d = new Date(view.getFullYear(), view.getMonth(), day);
     const cell = document.createElement("div");
-    cell.className = "cell" + (iso(d) === iso(today) ? " today" : "");
+    const isToday = iso(d) === iso(today);
+    cell.className = "cell" + (isToday ? " today" : "");
     cell.setAttribute("role","gridcell");
+    if(isToday) cell.setAttribute("aria-current","date");
 
     const num = document.createElement("div");
     num.className = "datenum"; num.textContent = day;
