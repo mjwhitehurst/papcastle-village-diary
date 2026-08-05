@@ -83,16 +83,11 @@ python run_demo.py                 # show parser output + latest-issue detection
 
 ## Remaining tasks
 
-1. **`update.yml` will open a PR every Monday even when the dates haven't
-   changed**, because `generated_at` in `events.json` is a fresh timestamp on
-   every run, so the file always differs. Fix by comparing only the `events`
-   payload before writing (or dropping `generated_at` into a separate field
-   the PR ignores). Until then, expect weekly no-op PRs.
-2. Optional custom domain: apex A records to 185.199.108.153 / .109.153 /
+1. Optional custom domain: apex A records to 185.199.108.153 / .109.153 /
    .110.153 / .111.153, `www` CNAME to `<user>.github.io`, then set the domain
    in Settings → Pages. `.app` TLDs are HTTPS-only (Pages issues the cert).
-3. Optional: implement `refine_with_llm`.
-4. No test suite exists despite `newsletters.py`/`diary.py` being called
+2. Optional: implement `refine_with_llm`.
+3. No test suite exists despite `newsletters.py`/`diary.py` being called
    "tested" below — `run_demo.py` prints, it doesn't assert. Its known-good
    output would make a decent pytest baseline.
 
@@ -100,6 +95,10 @@ python run_demo.py                 # show parser output + latest-issue detection
 
 - Keep `fetch.py` the only module that touches the network.
 - Don't lower the review gate — parsed data is reviewed before it publishes.
+- `main.py` leaves `events.json` untouched when a run would only change
+  `generated_at`, so the weekly CI run opens a PR only when the dates actually
+  moved. Keep any new provenance fields out of the comparison in `_comparable`
+  if they change every run, or the no-op PRs come back.
 - No build step for the site; keep `index.html` self-contained and its asset
   paths relative (it may be served from a repo subpath on Pages).
 - **Never use `toISOString()` on a calendar date in `index.html`.** The grid
