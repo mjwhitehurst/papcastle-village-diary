@@ -1,0 +1,80 @@
+{
+  "source": {
+    "issue": "The Villager Issue 77 Spring 2026",
+    "url": "https://www.papcastleparishcouncil.gov.uk/uploads/otherdocuments/files/Papcastle Villager Issue 77.pdf",
+    "issue_year": 2026,
+    "generated_at": "2026-08-05T12:39:32+00:00"
+  },
+  "events": [
+    {
+      "title": "Keep Fit in the Village Hall",
+      "kind": "recurring",
+      "date": null,
+      "weekday": "Monday",
+      "time_text": "6.30 - 7.30 pm",
+      "notes": "",
+      "raw": "Every Monday Keep Fit in the Village Hall. Suspended until Autumn. Please contact / 6.30 - 7.30 pm Tony for further details - tony.magorrian@googlemail.com",
+      "needs_review": true
+    },
+    {
+      "title": "Papcastle Yoga",
+      "kind": "recurring",
+      "date": null,
+      "weekday": "Thursday",
+      "time_text": "6.30 - 7.30 pm",
+      "notes": "",
+      "raw": "Every Thursday* Papcastle Yoga - with Caroline Alexander - fitflamingoyoga@gmail.com / 6.30 - 7.30 pm Continuing throughout August 2026. / * Wednesday 1st July) / (no classes on 7th & 14th May, 18th & 25th June and 30th July).",
+      "needs_review": true
+    },
+    {
+      "title": "Divas School of Dance",
+      "kind": "recurring",
+      "date": null,
+      "weekday": "Saturday",
+      "time_text": "Class times vary",
+      "notes": "",
+      "raw": "Every Saturday Divas School of Dance. Classes for all ages in Ballet, Modern & Tap. / Class times vary Please contact M Williamson on 07512804184 for further details or email / mandywilliamson72@yahoo.co.uk",
+      "needs_review": true
+    },
+    {
+      "title": "Foodie Quiz",
+      "kind": "one_off",
+      "date": "2026-05-08",
+      "weekday": null,
+      "time_text": "7.00 pm",
+      "notes": "",
+      "raw": "Friday, 8th May Foodie Quiz / 7.00 pm Bring your own drinks. / Tickets available from Hilary on 07958 957230. / £5 per adult, £1 per child",
+      "needs_review": true
+    },
+    {
+      "title": "Community Emergency Hub - Drop In",
+      "kind": "one_off",
+      "date": "2026-06-12",
+      "weekday": null,
+      "time_text": "6.30 - 8 pm",
+      "notes": "",
+      "raw": "Friday 12th June Community Emergency Hub - Drop In / 6.30 - 8 pm With Mountain Rescue volunteers",
+      "needs_review": true
+    },
+    {
+      "title": "Family Sports Day",
+      "kind": "one_off",
+      "date": "2026-07-04",
+      "weekday": null,
+      "time_text": "2-5 pm",
+      "notes": "",
+      "raw": "Saturday, 4th July Family Sports Day / 2-5 pm First River Field. Free. BYOB, picnics and blankets. / Contact Tai on 07874005870 or Cath on 07928169555",
+      "needs_review": true
+    },
+    {
+      "title": "Village BBQ",
+      "kind": "one_off",
+      "date": "2026-07-18",
+      "weekday": null,
+      "time_text": "6.00 pm",
+      "notes": "",
+      "raw": "Saturday 18th July SAVE THE DATE - Village BBQ !! / 6.00 pm onwards Tickets £15 includes welcome drink. Under 8's free. 8-16 yrs £7.50. / Contact Debbie for tickets 07754 127103.",
+      "needs_review": true
+    }
+  ]
+}
