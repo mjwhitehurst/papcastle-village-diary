@@ -1,5 +1,7 @@
 # Papcastle Village Diary
 
+**Live: https://mjwhitehurst.github.io/papcastle-village-diary/**
+
 A small static site that reads the latest **Villager** newsletter from the
 [Papcastle Parish Council site](https://www.papcastleparishcouncil.gov.uk/other-documents/),
 pulls out the diary dates, and shows them as a calendar.
@@ -49,8 +51,6 @@ Cloudflare Pages).
 The parser is best-effort by design, which is why every run goes through a
 review PR. Things to eyeball:
 
-- **Titles** with decoration, e.g. `SAVE THE DATE - Village BBQ` parses the
-  first clause. Fix in the PR or extend `_find_title` in `diary.py`.
 - **Status notes** like "suspended until autumn" or "no classes on…" are
   surfaced from the raw text but not fully structured.
 - **Year roll-over**: a Winter issue listing January events uses the issue's

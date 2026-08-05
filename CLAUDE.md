@@ -53,21 +53,29 @@ python run_demo.py                 # show parser output + latest-issue detection
 
 ## State — what's done vs. not
 
-- DONE & verified against real Issue 77 data: diary-date parsing and
-  latest-issue detection (all 7 events, correct dates).
-- NOT yet run against the live site: the HTML link-scraping in `fetch.py`
-  (`newsletter_links`). The sandbox it was built in couldn't reach the council
-  domain. **The first `python main.py` run is the real test of that function.**
-  It scopes to the "Newsletters" heading and keeps only links that parse to an
-  issue number as a backstop — but if the page's heading tags differ from the
-  assumption, that's the thing to fix.
+- LIVE as of 2026-08-05: https://mjwhitehurst.github.io/papcastle-village-diary/
+  (repo `mjwhitehurst/papcastle-village-diary`, Pages source = GitHub Actions).
+- DONE & verified end-to-end against the live site on 2026-08-05:
+  `newsletter_links` found Issue 77 in the real markup unchanged, and the
+  full run wrote all 7 events with correct dates, times and titles.
+- What the first live run broke, and how it was fixed (worth knowing, because
+  the same trap applies to any future format change):
+  - **The old fixture was a lie.** It had been reflowed by hand to one field
+    per line. Real `pdfplumber` output is a two-column table with the anchor
+    and title on ONE line (`Every Monday   Keep Fit in the Village Hall`).
+    `fixture_issue77.txt` is now genuine extractor output — don't tidy it up.
+  - **Parsing the whole newsletter invents events.** A Villager is a magazine
+    and articles open with dates, which produced six phantom entries.
+    `_diary_section` in `diary.py` now scopes to the "Diary Dates" table.
 
 ## Known rough edges (all handled by the review PR for now)
 
-- Titles with decoration, e.g. `SAVE THE DATE - Village BBQ` parses to the
-  first clause. Extend `_find_title` in `diary.py` to fix properly.
+- The end of the diary table is found heuristically (`_CONT_CUE`): real table
+  rows carry a time, price, phone or email and the prose after them doesn't.
+  If a future issue ends the table with a plain-text row, its trailing text
+  lands in the last event's `raw`.
 - Status notes ("suspended until autumn", "no classes on…") are surfaced from
-  raw text but not fully structured.
+  raw text but not fully structured. `site/index.html` greps `raw` for them.
 - Year roll-over: a Winter issue listing January events uses the issue's
   printed year; may need adjusting in review.
 - `refine_with_llm` in `diary.py` is a stub — the intended home for an LLM
@@ -75,15 +83,18 @@ python run_demo.py                 # show parser output + latest-issue detection
 
 ## Remaining tasks
 
-1. Run `python main.py` live once; fix `fetch.py`'s scraping if the real page
-   markup differs from the assumption.
-2. Hosting on GitHub Pages: Settings → Pages → Source = "GitHub Actions"; and
-   Settings → Actions → General → enable "Allow GitHub Actions to create and
-   approve pull requests" (so `update.yml` can open its PR).
-3. Optional custom domain: apex A records to 185.199.108.153 / .109.153 /
+1. **`update.yml` will open a PR every Monday even when the dates haven't
+   changed**, because `generated_at` in `events.json` is a fresh timestamp on
+   every run, so the file always differs. Fix by comparing only the `events`
+   payload before writing (or dropping `generated_at` into a separate field
+   the PR ignores). Until then, expect weekly no-op PRs.
+2. Optional custom domain: apex A records to 185.199.108.153 / .109.153 /
    .110.153 / .111.153, `www` CNAME to `<user>.github.io`, then set the domain
    in Settings → Pages. `.app` TLDs are HTTPS-only (Pages issues the cert).
-4. Optional: implement `refine_with_llm`.
+3. Optional: implement `refine_with_llm`.
+4. No test suite exists despite `newsletters.py`/`diary.py` being called
+   "tested" below — `run_demo.py` prints, it doesn't assert. Its known-good
+   output would make a decent pytest baseline.
 
 ## Conventions
 
