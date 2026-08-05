@@ -102,3 +102,7 @@ python run_demo.py                 # show parser output + latest-issue detection
 - Don't lower the review gate — parsed data is reviewed before it publishes.
 - No build step for the site; keep `index.html` self-contained and its asset
   paths relative (it may be served from a repo subpath on Pages).
+- **Never use `toISOString()` on a calendar date in `index.html`.** The grid
+  builds local-midnight `Date`s; `toISOString()` converts them to UTC, which
+  through BST lands on the previous day and shifts every event a day late.
+  `iso()` formats from local components — keep it that way.
