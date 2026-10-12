@@ -1,29 +1,29 @@
 {
   "source": {
-    "issue": "The Villager Issue 77 Spring 2026",
-    "url": "https://www.papcastleparishcouncil.gov.uk/uploads/otherdocuments/files/Papcastle Villager Issue 77.pdf",
+    "issue": "Villager 78 Summer 2026",
+    "url": "https://www.papcastleparishcouncil.gov.uk/uploads/otherdocuments/files/Villager 78.pdf",
     "issue_year": 2026,
-    "generated_at": "2026-08-05T12:39:32+00:00"
+    "generated_at": "2026-10-12T16:20:30+00:00"
   },
   "events": [
     {
-      "title": "Keep Fit in the Village Hall",
+      "title": "6",
       "kind": "recurring",
       "date": null,
       "weekday": "Monday",
-      "time_text": "6.30 - 7.30 pm",
+      "time_text": null,
       "notes": "",
-      "raw": "Every Monday Keep Fit in the Village Hall. Suspended until Autumn. Please contact / 6.30 - 7.30 pm Tony for further details - tony.magorrian@googlemail.com",
+      "raw": "Every Monday 6.30 - 7.30 pm Keep Fit in the Village Hall. / Restarts on 5th October Contact Tony for further details - tony.magorrian@googlemail.com",
       "needs_review": true
     },
     {
-      "title": "Papcastle Yoga",
+      "title": "6",
       "kind": "recurring",
       "date": null,
       "weekday": "Thursday",
-      "time_text": "6.30 - 7.30 pm",
+      "time_text": null,
       "notes": "",
-      "raw": "Every Thursday* Papcastle Yoga - with Caroline Alexander - fitflamingoyoga@gmail.com / 6.30 - 7.30 pm Continuing throughout August 2026. / * Wednesday 1st July) / (no classes on 7th & 14th May, 18th & 25th June and 30th July).",
+      "raw": "Every Thursday 6.30 - 7.30 pm Papcastle Yoga - with Caroline Alexander - fitflamingoyoga@gmail.com",
       "needs_review": true
     },
     {
@@ -33,47 +33,117 @@
       "weekday": "Saturday",
       "time_text": "Class times vary",
       "notes": "",
-      "raw": "Every Saturday Divas School of Dance. Classes for all ages in Ballet, Modern & Tap. / Class times vary Please contact M Williamson on 07512804184 for further details or email / mandywilliamson72@yahoo.co.uk",
+      "raw": "Every Saturday Divas School of Dance. / Class times vary Classes for all ages in Ballet, Modern & Tap. / Restarts on 5th September Please contact M Williamson on 07512804184 for further details or / email mandywilliamson72@yahoo.co.uk / Date tbc in the Autumn Foodie Quiz / Bring your own drinks. / Tickets available from Hilary on 07958 957230. / £5 per adult, £1 per child",
       "needs_review": true
     },
     {
-      "title": "Foodie Quiz",
+      "title": "7 pm Papcastle Talks",
       "kind": "one_off",
-      "date": "2026-05-08",
+      "date": "2026-09-11",
       "weekday": null,
-      "time_text": "7.00 pm",
+      "time_text": "3.00",
       "notes": "",
-      "raw": "Friday, 8th May Foodie Quiz / 7.00 pm Bring your own drinks. / Tickets available from Hilary on 07958 957230. / £5 per adult, £1 per child",
+      "raw": "Friday 11th September 7 pm Papcastle Talks / Pub Style Quiz on the British Constitution / By Janie and Robert / £3.00 including tea/coffee or BYO booze if required!",
       "needs_review": true
     },
     {
-      "title": "Community Emergency Hub - Drop In",
+      "title": "Mix, Mingle and Make Clay Pots",
       "kind": "one_off",
-      "date": "2026-06-12",
+      "date": "2026-09-12",
       "weekday": null,
-      "time_text": "6.30 - 8 pm",
+      "time_text": "5.30-6.30 pm",
       "notes": "",
-      "raw": "Friday 12th June Community Emergency Hub - Drop In / 6.30 - 8 pm With Mountain Rescue volunteers",
+      "raw": "Saturday 12th September Mix, Mingle and Make Clay Pots / Children 5.30-6.30 pm With Greengill Pottery / Adults 7-9 pm £12 Adults £5 Children. £40 for all 4 sessions. / To book your place contact Tai on 07874 005870 / Taiana.k.mcewan@gmail.com",
       "needs_review": true
     },
     {
-      "title": "Family Sports Day",
+      "title": "Mix, Mingle and Make Willow Bird Feeders",
       "kind": "one_off",
-      "date": "2026-07-04",
+      "date": "2026-10-10",
       "weekday": null,
-      "time_text": "2-5 pm",
+      "time_text": "5.30-6.30 pm",
       "notes": "",
-      "raw": "Saturday, 4th July Family Sports Day / 2-5 pm First River Field. Free. BYOB, picnics and blankets. / Contact Tai on 07874005870 or Cath on 07928169555",
+      "raw": "Saturday 10th October Mix, Mingle and Make Willow Bird Feeders / Children 5.30-6.30 pm With Wood, Wick and Knot / Adults 7-9 pm £12 Adults £5 Children. £40 for all 4 sessions. / To book your place contact Tai on 07874 005870 / Taiana.k.mcewan@gmail.com",
       "needs_review": true
     },
     {
-      "title": "Village BBQ",
+      "title": "7 pm Papcastle Talks - The Grand Egyptian Museum",
       "kind": "one_off",
-      "date": "2026-07-18",
+      "date": "2026-10-16",
       "weekday": null,
-      "time_text": "6.00 pm",
+      "time_text": "3.00",
       "notes": "",
-      "raw": "Saturday 18th July SAVE THE DATE - Village BBQ !! / 6.00 pm onwards Tickets £15 includes welcome drink. Under 8's free. 8-16 yrs £7.50. / Contact Debbie for tickets 07754 127103.",
+      "raw": "Friday 16th October 7 pm Papcastle Talks - The Grand Egyptian Museum / By Magdi - £3.00 including tea/coffee",
+      "needs_review": true
+    },
+    {
+      "title": "7 pm Village Hall Trustees Committee Meeting",
+      "kind": "one_off",
+      "date": "2026-10-21",
+      "weekday": null,
+      "time_text": null,
+      "notes": "",
+      "raw": "Wednesday 21st October 7 pm Village Hall Trustees Committee Meeting",
+      "needs_review": true
+    },
+    {
+      "title": "7 pm Papcastle Talks - The Coniston Bluebird",
+      "kind": "one_off",
+      "date": "2026-11-13",
+      "weekday": null,
+      "time_text": "3.00",
+      "notes": "",
+      "raw": "Friday 13th November 7 pm Papcastle Talks - The Coniston Bluebird / by Dawn Sempill - £3.00 including tea/coffee",
+      "needs_review": true
+    },
+    {
+      "title": "Mix, Mingle and Make Drumming Beats",
+      "kind": "one_off",
+      "date": "2026-11-14",
+      "weekday": null,
+      "time_text": "5.30-6.30 pm",
+      "notes": "",
+      "raw": "Saturday 14th November Mix, Mingle and Make Drumming Beats / Children 5.30-6.30 pm With Stix Percussion / Adults 7-9 pm £12 Adults £5 Children. £40 for all 4 sessions. To book your place con- / tact Tai on 07874 005870 Taiana.k.mcewan@gmail.com",
+      "needs_review": true
+    },
+    {
+      "title": "7-10 pm Carole’s Craft Fair with Mulled Wine and Mince Pies",
+      "kind": "one_off",
+      "date": "2026-11-18",
+      "weekday": null,
+      "time_text": null,
+      "notes": "",
+      "raw": "Wednesday 18th November 7-10 pm Carole’s Craft Fair with Mulled Wine and Mince Pies",
+      "needs_review": true
+    },
+    {
+      "title": "tbc Christmas Wreath Making workshop",
+      "kind": "one_off",
+      "date": "2026-11-21",
+      "weekday": null,
+      "time_text": null,
+      "notes": "",
+      "raw": "Saturday 21st November tbc Christmas Wreath Making workshop / Debbie Rushton/Judy Pattinson",
+      "needs_review": true
+    },
+    {
+      "title": "2027 Mix, Mingle and Make Sourdough Bread With Tai",
+      "kind": "one_off",
+      "date": "2026-01-16",
+      "weekday": null,
+      "time_text": "5.30-6.30 pm",
+      "notes": "",
+      "raw": "Saturday 16th January 2027 Mix, Mingle and Make Sourdough Bread With Tai / Children 5.30-6.30 pm £12 Adults £5 Children. £40 for all 4 sessions. / Adults 7-9 pm To book your place contact Tai on 07874 005870 / Taiana.k.mcewan@gmail.com",
+      "needs_review": true
+    },
+    {
+      "title": "2027 Whisky Tasting - Stephen £27",
+      "kind": "one_off",
+      "date": "2026-02-13",
+      "weekday": null,
+      "time_text": null,
+      "notes": "",
+      "raw": "Friday 13th February 2027 Whisky Tasting - Stephen £27.50",
       "needs_review": true
     }
   ]
